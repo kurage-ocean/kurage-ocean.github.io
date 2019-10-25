@@ -45,7 +45,7 @@
 
 			<div id="plofile">
 				<h2>Plofile</h2>
-				<div class="main-content">
+				<div class="main-content plf-content">
 					<div class="icon-area">
 						<img id="icon" src="images/icon.png">
 					</div>
@@ -66,9 +66,9 @@
 				<h2>Skill</h2>
 				<div class="main-content">
 					<div class="flex">
-						<div id="skill-anim1" class="skill-panel skill-panel-margin-r skill-panel-msrgin-b">
+						<div class="skill-panel skill-panel-margin-r skill-panel-msrgin-b">
 							<h3>コーディング</h3>
-							<div class="">
+							<div>
 								<ul>
 									<li class="flex">
 										<p>HTML</p>
@@ -101,7 +101,7 @@
 							</div>
 						</div>
 
-						<div id="skill-anim2" class="skill-panel skill-panel-msrgin-b">
+						<div class="skill-panel skill-panel-msrgin-b">
 							<h3>フロントエンド</h3>
 							<div class="">
 								<ul>
@@ -128,7 +128,7 @@
 					</div>
 
 					<div class="flex">
-						<div id="skill-anim3" class="skill-panel skill-panel-margin-r">
+						<div class="skill-panel skill-panel-margin-r">
 							<h3>Adobeソフト</h3>
 							<div class="">
 								<ul>
@@ -173,7 +173,7 @@
 							</div>
 						</div>
 
-						<div id="skill-anim4" class="skill-panel">
+						<div class="skill-panel skill-panel-margin-t">
 							<h3>その他</h3>
 							<div class="">
 								<ul>
@@ -207,20 +207,19 @@
 				<h2>Works</h2>
 				<div>
 					<div class="main-content flex">
-						<div class="works-panel">
-							<a href="https://kurage-ocean.github.io/"><img src="images/works-ポートフォリオ.jpg"></a>
-							<h4>ポートフォリオサイト</h4>
-							<p class="works-txt">制作時間:22時間<br>当サイトです。</p>
-						</div>
+						<div>
+							<h3>Webサイト</h3>
+							<div class="works-panel">
+								<a href="ポートフォリオ.html"><img src="images/works-ポートフォリオ.jpg"></a>
+								<h4>ポートフォリオサイト</h4>
+								<p class="works-txt">制作時間:22時間<br>当サイトです。</p>
+							</div>
 
-						<div class="works-panel">
-							<a href="http://oceanview.html.xdomain.jp/"><img src="images/ポモドーロタイマー.jpg"></a>
-							<h4>ポモドーロタイマー</h4>
-							<p class="works-txt">制作時間:２０時間<br>業務などの作業効率をアップさせることを目的にしたタイマーです。タイマーが0になると音が鳴る仕組みになっています。</p>
-						</div>
-
-						<div class="works-panel">
-
+							<div class="works-panel">
+								<a href=""><img src="images/ポモドーロタイマー.jpg"></a>
+								<h4>ポモドーロタイマー</h4>
+								<p class="works-txt">制作時間:２０時間<br>業務などの作業効率をアップさせることを目的にしたタイマーです。タイマーが0になると音が鳴る仕組みになっています。</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -230,7 +229,8 @@
 				<h2>Contact</h2>
 					<div class="main-content">
 						
-						<p>お問い合わせは下記twitterからご連絡ください。</p>
+						<p class="contact-txt-pc">お問い合わせは下記twitterからご連絡ください。</p>
+						<p class="contact-txt-sp">下記twitterからご連絡ください。</p>
 						<div class="contact-link">
 							<a href="https://twitter.com/kurageocean"><img class="contact-img" src="images/icon-mini.png"></a>
 						</div>
@@ -250,16 +250,30 @@
 		$("h2,h3,p,div:not(.wrapper)").addClass("notSee");
 	});
 	
-
-		
-		$(function() {
-	$(".notSee").on("inview", function(event, isInView, visiblePartX, visiblePartY) {
-		if(isInView){
-			$(this).stop().addClass('txt-fade');
-		}
-		
+	$(function() {
+		$(".notSee").on("inview", function(event, isInView, visiblePartX, visiblePartY) {
+			if(isInView){
+				$(this).stop().addClass('txt-fade');
+			}
+		});
 	});
-});
+		
+	$(function(){
+	   // #で始まるアンカーをクリックした場合に処理
+	   $('a[href^="#"]').click(function() {
+		  // スクロールの速度
+		  var speed = 500; // ミリ秒
+		  // アンカーの値取得
+		  var href= $(this).attr("href");
+		  // 移動先を取得
+		  var target = $(href == "#" || href == "" ? 'html' : href);
+		  // 移動先を数値で取得
+		  var position = target.offset().top;
+		  // スムーススクロール
+		  $('body,html').animate({scrollTop:position}, speed, 'swing');
+		  return false;
+	   });
+	});
 </script>
 </body>
 </html>
