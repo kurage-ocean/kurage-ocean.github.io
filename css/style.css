@@ -107,7 +107,7 @@ footer p{
 	}
 	
 	100%{
-		height: 3904px;
+		height: 4733px;
 	}
 }
 @keyframes navi{
@@ -151,11 +151,12 @@ footer p{
 }
 
 /*トップ*/
+
 .mainvisual{
 	width: 920px;
 	height: 512px;
 	margin:32px 0 104px -32px;
-	background:url("../images/ポートフォリオのトップ.jpg");
+	background:url("../images/ポートフォリオのトップ-pc.jpg");
 	animation-name: fadein-img;
 	animation-duration: 2.7s;
 }
@@ -257,4 +258,93 @@ div a #twitter-id{
 	color: #53E0FB;
 	line-height: 24px;
 }
+.contact-txt-sp{
+	display: none;
+}
+/*レスポンシブ*/
 
+@media screen and (max-width: 1024px){
+	body{
+		max-width: 360px;
+	}
+	main{
+		margin-right: 16px;
+		margin-left: 16px;
+	}
+	a p{
+		font-size: 16px;
+	}
+	h1{
+		font-size: 40px;
+		padding-top: 140px;
+		margin-left: 24px;
+		line-height: 96px;
+	}
+	h2{
+		font-size: 24px;
+		margin: 32px 0;
+	}
+	h3{
+		font-size: 20px;
+	}
+	/*トップのレスポンシブ*/
+	.mainvisual{
+		width: 360px;
+		margin:16px 0 104px -16px;
+		background:url("../images/ポートフォリオのトップ-sp.jpg");
+	}
+	/*プロフィールのレスポンシブ*/
+	#plofile{
+		display: block;
+		height: 710px;
+	}
+	#plofile .main-content{
+		display: block;
+	}
+	.icon-area{
+		margin-left: 4px;
+		width: 320px;
+	}
+	#icon{
+		margin: 0;
+	}
+	.plofile-txt{
+		width: 100%;
+	}
+	/*スキルのレスポンシブ*/
+	#skill .main-content div{
+		display: block;
+	}
+	.skill-panel{
+		width: 328px;
+		height: 328px;
+	}
+	.skill-panel-margin-r{
+		margin-right: 0;
+	}
+	.skill-panel-msrgin-b{
+		margin-bottom: 24px;
+	}
+	.skill-panel-margin-t{
+		margin-top: 24px;
+	}
+	#skill h3{
+		margin: 0;
+		padding: 24px 0;
+	}
+	#skill ul{
+		margin: 0;
+		padding-left: 30px;
+	}
+	/*ワークスのレスポンシブ*/
+	#works .flex{
+		display: block;
+	}
+	/*コンタクトのレスポンシブ*/
+	.contact-txt-pc{
+		display: none;
+	}
+	.contact-txt-sp{
+		display: block;
+	}
+}
