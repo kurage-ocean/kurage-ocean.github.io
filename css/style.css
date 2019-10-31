@@ -67,6 +67,8 @@ h1{
 }
 h2{
 	font-size: 72px;
+}
+h2,h4{
 	text-align: center;
 	color: #fff;
 }
@@ -78,8 +80,6 @@ h3{
 }
 h4{
 	font-size: 24px;
-	text-align: center;
-	color: #fff;
 }
 a{
 	text-decoration: none;
@@ -165,11 +165,11 @@ footer p{
 }
 
 /*プロフィール*/
-#plofile{
+#profile{
 	height: 480px;
 	margin:192px 0;
 }
-#plofile div{
+#profile div{
 	float: left;
 }
 .icon-area{
@@ -179,7 +179,7 @@ footer p{
 #icon{
 	margin-left: 38px;
 }
-.plofile-txt{
+.profile-txt{
 	width: 50%;
 	margin: 0 auto;
 }
