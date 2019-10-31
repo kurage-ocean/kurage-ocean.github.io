@@ -4,9 +4,6 @@
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, inisial-scale=1" http-equiv="X-UA-Compatible" >
 <title>ポートフォリオ</title>
-	<!--ファビコン-->
-<link rel="icon" href="images/icon.ico">
-	<!--CSS-->
 <link href="css/style.css" rel="stylesheet" type="text/css">
 	<!--jQueryのCDN-->
 <script
@@ -14,38 +11,7 @@
 	<!--inview js-->
 <script src="js/jquery.inview.js"></script>
 <script src="js/jquery.inview.min.js"></script>
-	
-	<!--jQuery-->
-	<script>
-	$(function(){
-		$("h2,h3,p,div:not(.wrapper)").addClass("notSee");
-	});
-	
-	$(function() {
-		$(".notSee").on("inview", function(event, isInView, visiblePartX, visiblePartY) {
-			if(isInView){
-				$(this).stop().addClass('txt-fade');
-			}
-		});
-	});
-		
-	$(function(){
-	   // #で始まるアンカーをクリックした場合に処理
-	   $('a[href^="#"]').click(function() {
-		  // スクロールの速度
-		  var speed = 500; // ミリ秒
-		  // アンカーの値取得
-		  var href= $(this).attr("href");
-		  // 移動先を取得
-		  var target = $(href == "#" || href == "" ? 'html' : href);
-		  // 移動先を数値で取得
-		  var position = target.offset().top;
-		  // スムーススクロール
-		  $('body,html').animate({scrollTop:position}, speed, 'swing');
-		  return false;
-	   });
-	});
-</script>
+
 
 </head>
 
@@ -79,11 +45,11 @@
 
 			<div id="profile">
 				<h2>Profile</h2>
-				<div class="main-content plf-content">
+				<div class="main-content prf-content">
 					<div class="icon-area">
 						<img id="icon" src="images/icon.png">
 					</div>
-					<div class="plofile-txt">
+					<div class="profile-txt">
 						<p>名前　  :山本優輝<br>
 							twitter :<a href="https://twitter.com/kurageocean">@kurageocean</a><br>
 							github  :<a href="https://github.com/kurage-ocean">kurage-ocean</a>
@@ -273,5 +239,38 @@
 			<p>Copyright©Yuki Yamamoto. All Rights Reserved.</p>
 		</footer>
 	</div>
+	<script type="text/javascript" src="js/portfolio.js"></script>
+	
+	<!--jQuery-->
+	<script>
+	$(function(){
+		$("h2,h3,p,div:not(.wrapper)").addClass("notSee");
+	});
+	
+	$(function() {
+		$(".notSee").on("inview", function(event, isInView, visiblePartX, visiblePartY) {
+			if(isInView){
+				$(this).stop().addClass('txt-fade');
+			}
+		});
+	});
+		
+	$(function(){
+	   // #で始まるアンカーをクリックした場合に処理
+	   $('a[href^="#"]').click(function() {
+		  // スクロールの速度
+		  var speed = 500; // ミリ秒
+		  // アンカーの値取得
+		  var href= $(this).attr("href");
+		  // 移動先を取得
+		  var target = $(href == "#" || href == "" ? 'html' : href);
+		  // 移動先を数値で取得
+		  var position = target.offset().top;
+		  // スムーススクロール
+		  $('body,html').animate({scrollTop:position}, speed, 'swing');
+		  return false;
+	   });
+	});
+</script>
 </body>
 </html>
