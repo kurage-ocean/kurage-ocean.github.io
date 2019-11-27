@@ -82,7 +82,7 @@ h4{
 	font-size: 24px;
 }
 a{
-	text-decoration: none;
+	color: #fff;
 }
 p{
 	color: #fff;
@@ -101,7 +101,9 @@ footer p{
 	opacity: 1;
 	transition: 0.8s;
 }
-
+.ttl-white{
+	color: #fff;
+}
 
 /*アニメーション*/
 @keyframes tobottom{
@@ -186,8 +188,8 @@ footer p{
 
 /*スキル*/
 .skill-panel{
-	width: 360px;
-	height: 360px;
+	width: 412px;
+	height: 412px;
 	background-color: #fff;
 }
 div ul{
@@ -198,10 +200,10 @@ div ul{
 	color: #825858;
 }
 .skill-panel-margin-r{
-	margin-right: 128px;
+	margin-right: 24px;
 }
 .skill-panel-msrgin-b{
-	margin-bottom: 128px;
+	margin-bottom: 24px;
 }
 .star-rating {
 	position: relative;
@@ -258,7 +260,6 @@ div .works-txt{
 div a #twitter-id{
 	height: 24px;
 	font-size: 24px;
-	color: #53E0FB;
 	line-height: 24px;
 }
 .contact-txt-sp{
