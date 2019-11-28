@@ -298,12 +298,9 @@ div a #twitter-id{
 		background:url("../images/ポートフォリオのトップ-sp.jpg");
 	}
 	/*プロフィールのレスポンシブ*/
-	#plofile{
+	#profile{
 		display: block;
-		height: 710px;
-	}
-	#plofile .main-content{
-		display: block;
+		height: 688px;
 	}
 	.icon-area{
 		margin-left: 4px;
@@ -312,8 +309,8 @@ div a #twitter-id{
 	#icon{
 		margin: 0;
 	}
-	.plofile-txt{
-		width: 100%;
+	.profile-txt{
+		width: 328px;
 	}
 	/*スキルのレスポンシブ*/
 	#skill .main-content div{
