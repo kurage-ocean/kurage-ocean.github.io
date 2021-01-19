@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/* Scss Document */
+/*全ページ共通*/
+.mockup {
+  width: 100%;
+  height: 256px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+h2 {
+  font-size: 17px;
+  color: #6A4B23; }
+
+.to-list {
+  text-align: center;
+  margin-top: 64px; }
+  .to-list a {
+    font-size: 14px;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    color: #354E49;
+    border-bottom: 1px solid #354E49; }
+
+.grid-4columns, .grid-4columns2, .grid-3columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 8px;
+  grid-column-gap: 8px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin: 44px auto 0;
+  width: 100%; }
+
+.grid-detail .categry {
+  font-size: 12px;
+  color: #fff;
+  background-color: #354E49;
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 2px;
+  font-family: 'Fira Sans', sans-serif; }
+.grid-detail h1 {
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 35px; }
+.grid-detail .description p {
+  line-height: 28px;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif; }
+.grid-detail .description .tantou {
+  margin: 23px 0 18px; }
+.grid-detail .works-link {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 26px;
+  font-family: 'Fira Sans', sans-serif; }
+.grid-detail a {
+  word-wrap: break-word;
+  font-size: 11px;
+  font-weight: 400; }
+
+.pc-img img, .sp-img img, .others-img img, .img-l img, .img-r img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px; }
+
+.other {
+  width: 192px;
+  margin: 0 auto; }
+  .other div a {
+    text-decoration-color: #6A4B23; }
+    .other div a p {
+      font-size: 20px; }
+    .other div a i {
+      color: #6A4B23;
+      font-size: 20px;
+      margin-top: 7px; }
+  .other div:nth-child(2) {
+    margin-left: 24px;
+    margin-right: 24px; }
+
+/*バナー用*/
+.banner-img img {
+  width: 100%;
+  display: block;
+  margin: 0 auto; }
+
+/*個別ページ*/
+.works-mock1 {
+  background-image: url("../img/works-img/works1-mock-sp.jpg"); }
+
+.works-mock2 {
+  background-image: url("../img/works-img/works2-mock-sp.jpg"); }
+
+.works-mock3 {
+  background-image: url("../img/works-img/works3-mock-sp.jpg"); }
+
+.works-mock4 {
+  background-image: url("../img/works-img/works4-mock-sp.jpg"); }
+
+.works-mock5 {
+  background-image: url("../img/works-img/works5-mock-sp.jpg"); }
+
+.works-mock6 {
+  background-image: url("../img/works-img/works6-mock-sp.jpg"); }
+
+.works-mock-o-1 {
+  background-image: url("../img/works-img/works-o-1-mock-sp.jpg"); }
+
+.works-mock-o-2 {
+  background-image: url("../img/works-img/works-o-2-mock-sp.jpg"); }
+
+.works-mock-o-3 {
+  background-image: url("../img/works-img/works-o-3-mock-sp.jpg"); }
+
+/*レスポンシブ*/
+@media screen and (min-width: 560px) {
+  /*バナー用*/
+  .banner {
+    display: flex; }
+    .banner .banner-img, .banner .banner-txt {
+      width: 50%; }
+
+  .grid-4columns {
+    grid-template-columns: 4fr 1fr 4fr 3fr;
+    margin: 64px auto 0; }
+
+  .grid-4columns2 {
+    grid-template-columns: 4fr 1fr 4fr 4fr;
+    margin: 64px auto 0; }
+
+  .grid-3columns {
+    grid-template-columns: 4fr 1fr 5fr; }
+
+  .mockup {
+    height: 504px; }
+
+  /*個別ページ*/ }
+@media screen and (min-width: 1025px) {
+  /*個別ページ*/
+  .mockup {
+    background-size: 100% auto; }
+
+  .works-mock1 {
+    background-image: url("../img/works-img/works2-mock.jpg"); }
+
+  .works-mock2 {
+    background-image: url("../img/works-img/works2-mock.jpg"); }
+
+  .works-mock3 {
+    background-image: url("../img/works-img/works3-mock.jpg"); }
+
+  .works-mock4 {
+    background-image: url("../img/works-img/works4-mock.jpg"); }
+
+  .works-mock5 {
+    background-image: url("../img/works-img/works5-mock.jpg"); }
+
+  .works-mock6 {
+    background-image: url("../img/works-img/works6-mock.jpg"); }
+
+  .works-mock-o-1 {
+    background-image: url("../img/works-img/works-o-1-mock.jpg"); }
+
+  .works-mock-o-2 {
+    background-image: url("../img/works-img/works-o-2-mock.jpg"); }
+
+  .works-mock-o-3 {
+    background-image: url("../img/works-img/works-o-3-mock.jpg"); } }
