@@ -46,7 +46,8 @@
         color: #354E49;
         font-size: 22px;
         line-height: 38px;
-        letter-spacing: normal; }
+        letter-spacing: normal;
+        font-family: 'Noto Sans JP', sans-serif; }
       .top-visual .top-txt .copy span {
         display: block;
         height: 2px;
