@@ -14,12 +14,13 @@ header {
   .top-header .header-wrapper {
     display: flex;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: calc(100vh / 16 - 24.4px);
+    right: calc(100vw / 32);
     z-index: 9999;
     background-color: rgba(115, 142, 153, 0.8);
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
     /*margin: 25px 25px 0 0;*/ }
   .top-header img {
     margin: 136px 0 0 52px;
@@ -31,7 +32,7 @@ header {
     position: relative;
     width: 24px;
     height: 24px;
-    margin: 16px 16px;
+    margin: 20px 20px;
     z-index: 999; }
     .top-header .header-btn i {
       display: block;
@@ -113,6 +114,12 @@ header {
     visibility: visible; }
 
 /*ヘッダーここまで*/
+/*ロゴ*/
+.logo {
+  margin: calc(100vh / 16) 0 0 calc(100vw / 16); }
+  .logo img {
+    width: 84px; }
+
 /*アニメーション*/
 .fade {
   animation: fadeIn 0.5s ease 0s 1 normal; }

@@ -1,64 +1,46 @@
-@charset "UTF-8";
 /* Scss Document */
-.top-visual::before {
-  /* 透過した黒を上から重ねるイメージ */
-  background-color: rgba(0, 0, 0, 0.3);
-  /* 自由に位置指定 */
-  position: absolute;
-  height: 812px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: ' '; }
-
-.top-visual {
-  height: 812px;
-  background-image: url("../img/top-visual-sp.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom; }
-  .top-visual .top-txt {
+.first-view {
+  height: 100vh; }
+  .first-view .top-txt {
+    top: 50vh;
     width: 100%;
-    background-color: #EEEAE4;
-    position: absolute; }
-    .top-visual .top-txt .site-ttl {
-      height: 100vh;
-      max-height: 245px;
-      background-color: #738E99; }
-      .top-visual .top-txt .site-ttl h1 {
-        padding: 82px 0 13px;
-        font-family: 'Fira Sans', sans-serif;
-        font-weight: 200;
-        text-align: center;
-        color: #fff;
-        font-size: 54px; }
-      .top-visual .top-txt .site-ttl p {
-        text-align: center;
-        color: #fff;
-        font-size: 14px;
-        margin: 0 0 0 0; }
-    .top-visual .top-txt .copy {
-      width: 186px;
-      margin: 0 auto;
+    position: absolute;
+    z-index: 10;
+    margin-left: calc(100vw / 16); }
+    .first-view .top-txt .site-ttl h1 {
+      padding: 0 0 13px;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 600;
+      color: #345e49;
+      font-size: 104px; }
+    .first-view .top-txt .site-ttl p {
+      color: #345e49;
+      font-size: 32px;
+      font-weight: 600;
+      margin: 0 0 0 0; }
+    .first-view .top-txt .copy {
       padding: 52px 0; }
-      .top-visual .top-txt .copy h2 {
-        color: #354E49;
-        font-size: 22px;
-        line-height: 38px;
-        letter-spacing: normal;
-        font-family: 'Noto Sans JP', sans-serif; }
-      .top-visual .top-txt .copy span {
+      .first-view .top-txt .copy span {
         display: block;
         height: 2px;
         width: 44px;
         background-color: #354E49;
         margin: 40px auto 28px 0; }
-      .top-visual .top-txt .copy p {
-        font-size: 14px;
+      .first-view .top-txt .copy p {
+        font-size: 18px;
         color: #354E49;
         line-height: 24px;
-        letter-spacing: normal; }
+        letter-spacing: 0.15em; }
+  .first-view .top-visual {
+    width: 75vw;
+    height: calc( 100vh / 3 * 2);
+    background-image: url("../img/top-visual-pc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    z-index: 1; }
 
 .main-contents {
   margin-top: 104px; }
@@ -114,19 +96,42 @@
     display: inline-block;
     color: #354E49; }
 
+@media screen and (max-width: 1024px) {
+  .first-view .top-txt {
+    top: 70vh;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin-left: calc(100vw / 16); }
+    .first-view .top-txt .site-ttl h1 {
+      padding: 0 0 13px;
+      font-size: 56px; }
+    .first-view .top-txt .site-ttl p {
+      color: #345e49;
+      font-size: 20px; }
+    .first-view .top-txt .copy {
+      padding: 17px 0;
+      width: 260px; }
+      .first-view .top-txt .copy p {
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.15em; }
+  .first-view .top-visual {
+    width: auto;
+    height: 50vh;
+    background-image: url("../img/top-visual-pc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 16vh;
+    left: calc(100vw / 16);
+    z-index: 1; } }
 @media screen and (min-width: 561px) {
-  .top-visual {
-    background-image: url("../img/top-visual-pc.jpg"); }
-    .top-visual .top-txt {
-      width: calc( 100vw / 3); } }
+  .first-view .top-txt {
+    width: calc( 100vw / 3); } }
 @media screen and (min-width: 561px) and (max-width: 1024px) {
-  .top-visual::before {
-    height: 591px; }
-
-  .top-visual {
-    height: 591px; }
-    .top-visual .top-txt .site-ttl h1 {
-      font-size: 50px; }
+  .first-view .top-txt .site-ttl h1 {
+    font-size: 50px; }
 
   .works-contents {
     display: grid;
@@ -146,23 +151,9 @@
       display: block;
       width: 50%; } }
 @media screen and (min-width: 1025px) {
-  .top-visual::before {
-    height: auto; }
-
-  .top-visual {
+  .first-view {
     height: 100vh; }
-    .top-visual .top-txt {
-      height: 100vh; }
-      .top-visual .top-txt .site-ttl {
-        height: 100vh;
-        max-height: 245px; }
-      .top-visual .top-txt .copy {
-        width: 284px; }
-        .top-visual .top-txt .copy h2 {
-          font-size: 28px;
-          line-height: 48px;
-          letter-spacing: 0.1em; }
-        .top-visual .top-txt .copy p {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.1em; } }
+    .first-view .copy {
+      width: 416px; }
+    .first-view .top-visual {
+      background-position: bottom 40% right 0px; } }
